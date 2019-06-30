@@ -1,6 +1,6 @@
 package software.crafting.serbia;
 
-import org.approvaltests.Approvals;
+import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
 
 public class GildedRoseTest {
@@ -8,13 +8,12 @@ public class GildedRoseTest {
   @Test
   public void approvalTestFixtureForGildedRose() {
     // Given
-    final String name = "name";
-
-    // When
-    String result = doStuff(name);
+    final String[] names = {
+        "name"
+    };
 
     // Then
-    Approvals.verify(result);
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names);
 
   }
 
