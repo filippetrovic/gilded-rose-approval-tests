@@ -16,9 +16,6 @@ public class GildedRose {
 
   private void loopBody(Item item) {
     switch (item.name) {
-      case "Aged Brie":
-        updateAgedBrie(item);
-        break;
       case "Backstage passes to a TAFKAL80ETC concert":
         updateBackstagePasses(item);
         break;
