@@ -15,14 +15,7 @@ public class GildedRose {
   }
 
   private void loopBody(Item item) {
-    switch (item.name) {
-      case "Sulfuras, Hand of Ragnaros":
-
-        break;
-      default:
-        item.update();
-        break;
-    }
+    item.update();
   }
 
 }

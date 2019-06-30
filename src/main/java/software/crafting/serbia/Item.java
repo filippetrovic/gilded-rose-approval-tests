@@ -21,7 +21,7 @@ public class Item {
       case "Backstage passes to a TAFKAL80ETC concert":
         return new BackstagePasses(name, sellIn, quality);
       case "Sulfuras, Hand of Ragnaros":
-        return new Item(name, sellIn, quality);
+        return new Sulfuras(name, sellIn, quality);
       default:
         return new Item(name, sellIn, quality);
     }
