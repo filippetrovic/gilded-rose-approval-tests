@@ -34,11 +34,12 @@ public class Item {
   }
 
   public void update() {
-    decrementQuality();
-
     sellIn = sellIn - 1;
 
     if (sellIn < 0) {
+      decrementQuality();
+      decrementQuality();
+    } else {
       decrementQuality();
     }
   }
