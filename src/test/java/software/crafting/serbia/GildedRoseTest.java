@@ -8,16 +8,22 @@ public class GildedRoseTest {
   @Test
   public void approvalTestFixtureForGildedRose() {
     // Given
-    Item[] items = new Item[]{
-        new Item("name", 0, 0)
-    };
-    final GildedRose gildedRose = new GildedRose(items);
+    final String name = "name";
 
     // When
-    gildedRose.updateQuality();
+    String result = doStuff(name);
 
     // Then
-    Approvals.verify(items[0].toString());
+    Approvals.verify(result);
 
+  }
+
+  private String doStuff(String name) {
+    Item[] items = new Item[]{
+        new Item(name, 0, 0)
+    };
+    final GildedRose gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+    return items[0].toString();
   }
 }
