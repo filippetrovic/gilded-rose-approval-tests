@@ -19,7 +19,7 @@ public class Item {
       case "Aged Brie":
         return new AgedBrie(name, sellIn, quality);
       case "Backstage passes to a TAFKAL80ETC concert":
-        return new Item(name, sellIn, quality);
+        return new BackstagePasses(name, sellIn, quality);
       case "Sulfuras, Hand of Ragnaros":
         return new Item(name, sellIn, quality);
       default:
