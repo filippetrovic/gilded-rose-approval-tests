@@ -37,16 +37,16 @@ public class Item {
     sellIn = sellIn - 1;
 
     if (sellIn < 0) {
-      decrementQuality();
-      decrementQuality();
+      decreaseQuality(2);
     } else {
-      decrementQuality();
+      decreaseQuality(1);
     }
   }
 
-  private void decrementQuality() {
-    if (quality > 0) {
-      quality = quality - 1;
+  private void decreaseQuality(int decrement) {
+    quality = quality - decrement;
+    if (quality < 0) {
+      quality = 0;
     }
   }
 
