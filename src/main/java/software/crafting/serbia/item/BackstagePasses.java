@@ -14,14 +14,11 @@ public class BackstagePasses extends Item {
     if (sellIn < 0) {
       noQuality();
     } else if (sellIn < 5) {
-      incrementQuality();
-      incrementQuality();
-      incrementQuality();
+      increaseQuality(3);
     } else if (sellIn < 10) {
-      incrementQuality();
-      incrementQuality();
+      increaseQuality(2);
     } else {
-      incrementQuality();
+      increaseQuality(1);
     }
 
   }

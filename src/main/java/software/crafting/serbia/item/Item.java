@@ -59,4 +59,12 @@ public class Item {
   protected void noQuality() {
     quality = 0;
   }
+
+  protected void increaseQuality(int increment) {
+    quality += increment;
+
+    if (quality > 50) {
+      quality = 50;
+    }
+  }
 }
