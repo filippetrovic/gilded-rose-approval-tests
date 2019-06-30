@@ -3,6 +3,7 @@ package software.crafting.serbia;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.approvaltests.legacycode.Range;
 import org.junit.Test;
+import software.crafting.serbia.item.Item;
 
 public class GildedRoseTest {
 
