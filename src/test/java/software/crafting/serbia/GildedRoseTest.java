@@ -1,6 +1,7 @@
 package software.crafting.serbia;
 
 import org.approvaltests.combinations.CombinationApprovals;
+import org.approvaltests.legacycode.Range;
 import org.junit.Test;
 
 public class GildedRoseTest {
@@ -16,14 +17,19 @@ public class GildedRoseTest {
         "Sulfuras, Hand of Ragnaros"
     };
 
+    Integer[] qualities = Range.get(-60, 100);
+
+    Integer[] sellIns = Range.get(-30, 30);
+
+
     // Then
-    CombinationApprovals.verifyAllCombinations(this::doStuff, names);
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities, sellIns);
 
   }
 
-  private String doStuff(String name) {
+  private String doStuff(String name, Integer quality, Integer sellIn) {
     Item[] items = new Item[]{
-        new Item(name, 0, 0)
+        new Item(name, sellIn, quality)
     };
 
     final GildedRose gildedRose = new GildedRose(items);
