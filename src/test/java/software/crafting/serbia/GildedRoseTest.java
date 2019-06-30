@@ -1,8 +1,7 @@
 package software.crafting.serbia;
 
+import org.approvaltests.Approvals;
 import org.junit.Test;
-
-import static org.assertj.core.api.Assertions.*;
 
 public class GildedRoseTest {
 
@@ -18,8 +17,7 @@ public class GildedRoseTest {
     gildedRose.updateQuality();
 
     // Then
-    assertThat(items[0].toString())
-        .isEqualTo("name, -1, 0");
+    Approvals.verify(items[0].toString());
 
   }
 }
