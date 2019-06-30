@@ -14,9 +14,9 @@ public class AgedBrie extends Item {
     sellIn = sellIn - 1;
 
     if (sellIn < 0) {
-      increaseQuality(2);
+      quality.increase(2);
     } else {
-      increaseQuality(1);
+      quality.increase(1);
     }
   }
 

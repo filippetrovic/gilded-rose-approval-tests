@@ -39,21 +39,10 @@ public class Item {
     sellIn = sellIn - 1;
 
     if (sellIn < 0) {
-      decreaseQuality(2);
+      quality.decrease(2);
     } else {
-      decreaseQuality(1);
+      quality.decrease(1);
     }
   }
 
-  private void decreaseQuality(int decrement) {
-    quality.decrease(decrement);
-  }
-
-  protected void noQuality() {
-    quality.noQuality();
-  }
-
-  protected void increaseQuality(int increment) {
-    quality.increase(increment);
-  }
 }
