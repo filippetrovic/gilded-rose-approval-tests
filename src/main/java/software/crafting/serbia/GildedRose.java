@@ -10,6 +10,14 @@ public class GildedRose {
 
   public void updateQuality() {
     for (Item item : items) {
+      tmp(item);
+    }
+  }
+
+  private void tmp(Item item) {
+    if (item.name.equals("Aged Brie")) {
+      loopBody(item);
+    } else {
       loopBody(item);
     }
   }
