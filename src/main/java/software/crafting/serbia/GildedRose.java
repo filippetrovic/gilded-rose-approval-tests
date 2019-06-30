@@ -10,12 +10,8 @@ public class GildedRose {
 
   public void updateQuality() {
     for (Item item : items) {
-      loopBody(item);
+      item.update();
     }
-  }
-
-  private void loopBody(Item item) {
-    item.update();
   }
 
 }
