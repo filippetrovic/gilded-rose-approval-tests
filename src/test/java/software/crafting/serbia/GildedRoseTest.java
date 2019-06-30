@@ -18,7 +18,7 @@ public class GildedRoseTest {
         "Sulfuras, Hand of Ragnaros"
     };
 
-    Integer[] qualities = Range.get(-60, 100);
+    Integer[] qualities = Range.get(0, 50);
 
     Integer[] sellIns = Range.get(-30, 30);
 
