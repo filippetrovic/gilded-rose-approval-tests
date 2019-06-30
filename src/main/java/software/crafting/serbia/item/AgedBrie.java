@@ -12,10 +12,9 @@ public class AgedBrie extends Item {
     sellIn = sellIn - 1;
 
     if (sellIn < 0) {
-      incrementQuality();
-      incrementQuality();
+      increaseQuality(2);
     } else {
-      incrementQuality();
+      increaseQuality(1);
     }
   }
 

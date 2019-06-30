@@ -50,12 +50,6 @@ public class Item {
     }
   }
 
-  protected void incrementQuality() {
-    if (quality < 50) {
-      quality = quality + 1;
-    }
-  }
-
   protected void noQuality() {
     quality = 0;
   }
