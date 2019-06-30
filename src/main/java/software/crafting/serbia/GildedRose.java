@@ -1,6 +1,6 @@
 package software.crafting.serbia;
 
-class GildedRose {
+public class GildedRose {
 
   Item[] items;
 
