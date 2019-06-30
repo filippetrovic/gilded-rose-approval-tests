@@ -22,8 +22,11 @@ public class GildedRoseTest {
     Item[] items = new Item[]{
         new Item(name, 0, 0)
     };
+
     final GildedRose gildedRose = new GildedRose(items);
+
     gildedRose.updateQuality();
+
     return items[0].toString();
   }
 }
