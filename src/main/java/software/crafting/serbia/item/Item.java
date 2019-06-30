@@ -39,9 +39,9 @@ public class Item {
     sellIn = sellIn - 1;
 
     if (sellIn < 0) {
-      quality.decrease(2);
+      quality = quality.decrease(2);
     } else {
-      quality.decrease(1);
+      quality = quality.decrease(1);
     }
   }
 

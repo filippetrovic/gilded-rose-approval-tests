@@ -2,7 +2,7 @@ package software.crafting.serbia.attribute;
 
 public class Quality {
 
-  private int value;
+  private final int value;
 
   public Quality(int value) {
     this.value = value;
@@ -21,23 +21,16 @@ public class Quality {
     return new Quality(quality);
   }
 
-  public void decrease(int decrement) {
-    value = value - decrement;
-    if (value < 0) {
-      value = 0;
-    }
+  public Quality minimum() {
+    return new Quality(0);
   }
 
-  public void noQuality() {
-    value = 0;
+  public Quality decrease(int decrement) {
+    return Quality.of(value - decrement);
   }
 
-  public void increase(int increment) {
-    value += increment;
-
-    if (value > 50) {
-      value = 50;
-    }
+  public Quality increase(int increment) {
+    return Quality.of(value + increment);
   }
 
   public int asInt() {

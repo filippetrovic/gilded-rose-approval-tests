@@ -14,13 +14,13 @@ public class BackstagePasses extends Item {
     sellIn = sellIn - 1;
 
     if (sellIn < 0) {
-      quality.noQuality();
+      quality = quality.minimum();
     } else if (sellIn < 5) {
-      quality.increase(3);
+      quality = quality.increase(3);
     } else if (sellIn < 10) {
-      quality.increase(2);
+      quality = quality.increase(2);
     } else {
-      quality.increase(1);
+      quality = quality.increase(1);
     }
 
   }
