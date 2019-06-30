@@ -9,6 +9,7 @@ public class GildedRoseTest {
   public void approvalTestFixtureForGildedRose() {
     // Given
     final String[] names = {
+        "",
         "name",
         "Aged Brie",
         "Backstage passes to a TAFKAL80ETC concert",
