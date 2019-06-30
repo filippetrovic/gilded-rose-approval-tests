@@ -11,7 +11,9 @@ public class BackstagePasses extends Item {
 
     sellIn = sellIn - 1;
 
-    if (sellIn < 5) {
+    if (sellIn < 0) {
+      noQuality();
+    } else if (sellIn < 5) {
       incrementQuality();
       incrementQuality();
       incrementQuality();
@@ -22,8 +24,6 @@ public class BackstagePasses extends Item {
       incrementQuality();
     }
 
-    if (sellIn < 0) {
-      quality = 0;
-    }
   }
+
 }
