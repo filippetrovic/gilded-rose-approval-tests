@@ -18,8 +18,8 @@ public class GildedRoseTest {
     gildedRose.updateQuality();
 
     // Then
-    assertThat(items[0].name)
-        .isEqualTo("name");
+    assertThat(items[0].toString())
+        .isEqualTo("name, -1, 0");
 
   }
 }
