@@ -1,8 +1,10 @@
 package software.crafting.serbia.item;
 
+import software.crafting.serbia.attribute.Quality;
+
 public class AgedBrie extends Item {
 
-  public AgedBrie(String name, int sellIn, int quality) {
+  public AgedBrie(String name, int sellIn, Quality quality) {
     super(name, sellIn, quality);
   }
 

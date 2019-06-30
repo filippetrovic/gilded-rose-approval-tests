@@ -1,20 +1,22 @@
 package software.crafting.serbia.item;
 
+import software.crafting.serbia.attribute.Quality;
+
 public class Item {
 
   public String name;
 
   public int sellIn;
 
-  public int quality;
+  public Quality quality;
 
-  Item(String name, int sellIn, int quality) {
+  Item(String name, int sellIn, Quality quality) {
     this.name = name;
     this.sellIn = sellIn;
     this.quality = quality;
   }
 
-  public static Item createItem(String name, int sellIn, int quality) {
+  public static Item createItem(String name, int sellIn, Quality quality) {
     switch (name) {
       case "Aged Brie":
         return new AgedBrie(name, sellIn, quality);
@@ -30,7 +32,7 @@ public class Item {
 
   @Override
   public String toString() {
-    return this.name + ", " + this.sellIn + ", " + this.quality;
+    return this.name + ", " + this.sellIn + ", " + this.quality.asInt();
   }
 
   public void update() {
@@ -44,21 +46,14 @@ public class Item {
   }
 
   private void decreaseQuality(int decrement) {
-    quality = quality - decrement;
-    if (quality < 0) {
-      quality = 0;
-    }
+    quality.decrease(decrement);
   }
 
   protected void noQuality() {
-    quality = 0;
+    quality.noQuality();
   }
 
   protected void increaseQuality(int increment) {
-    quality += increment;
-
-    if (quality > 50) {
-      quality = 50;
-    }
+    quality.increase(increment);
   }
 }

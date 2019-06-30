@@ -1,8 +1,10 @@
 package software.crafting.serbia.item;
 
+import software.crafting.serbia.attribute.Quality;
+
 public class BackstagePasses extends Item {
 
-  BackstagePasses(String name, int sellIn, int quality) {
+  BackstagePasses(String name, int sellIn, Quality quality) {
     super(name, sellIn, quality);
   }
 

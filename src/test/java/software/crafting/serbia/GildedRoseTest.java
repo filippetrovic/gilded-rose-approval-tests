@@ -3,6 +3,7 @@ package software.crafting.serbia;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.approvaltests.legacycode.Range;
 import org.junit.Test;
+import software.crafting.serbia.attribute.Quality;
 import software.crafting.serbia.item.Item;
 
 public class GildedRoseTest {
@@ -30,7 +31,7 @@ public class GildedRoseTest {
 
   private String doStuff(String name, Integer quality, Integer sellIn) {
     Item[] items = new Item[]{
-        Item.createItem(name, sellIn, quality)
+        Item.createItem(name, sellIn, Quality.of(quality))
     };
 
     final GildedRose gildedRose = new GildedRose(items);
