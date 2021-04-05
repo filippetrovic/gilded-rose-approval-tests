@@ -10,16 +10,15 @@ public class GildedRoseTest {
   public void approvalTestFixtureForGildedRose() {
     // Given
     final String[] names = {
-        "",
         "name",
         "Aged Brie",
         "Backstage passes to a TAFKAL80ETC concert",
         "Sulfuras, Hand of Ragnaros"
     };
 
-    Integer[] qualities = Range.get(-60, 100);
+    Integer[] qualities = Range.get(-5, 51);
 
-    Integer[] sellIns = Range.get(-30, 30);
+    Integer[] sellIns = Range.get(-5, 15);
 
 
     // Then
