@@ -8,13 +8,16 @@ public class Item {
 
   public int quality;
 
-  private Item(String name, int sellIn, int quality) {
+  protected Item(String name, int sellIn, int quality) {
     this.name = name;
     this.sellIn = sellIn;
     this.quality = quality;
   }
 
   public static Item createItem(String name, int sellIn, int quality) {
+    if ("Backstage passes to a TAFKAL80ETC concert".equals(name)) {
+      return new BackstagePasses(sellIn, quality);
+    }
     return new Item(name, sellIn, quality);
   }
 
@@ -25,29 +28,6 @@ public class Item {
 
   public void updateQuality() {
     switch (name) {
-      case "Backstage passes to a TAFKAL80ETC concert":
-        if (quality < 50) {
-          quality = quality + 1;
-
-          if (sellIn < 11) {
-            if (quality < 50) {
-              quality = quality + 1;
-            }
-          }
-
-          if (sellIn < 6) {
-            if (quality < 50) {
-              quality = quality + 1;
-            }
-          }
-        }
-
-        sellIn = sellIn - 1;
-
-        if (sellIn < 0) {
-          quality = quality - quality;
-        }
-        break;
       case "Aged Brie":
         if (quality < 50) {
           quality = quality + 1;
