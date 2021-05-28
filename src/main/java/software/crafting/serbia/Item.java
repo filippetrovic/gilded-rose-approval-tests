@@ -15,12 +15,16 @@ public class Item {
   }
 
   public static Item createItem(String name, int sellIn, int quality) {
-    if ("Backstage passes to a TAFKAL80ETC concert".equals(name)) {
-      return new BackstagePasses(sellIn, quality);
-    } else if ("Aged Brie".equals(name)) {
-      return new AgedBrie(sellIn, quality);
+    switch (name) {
+      case "Backstage passes to a TAFKAL80ETC concert":
+        return new BackstagePasses(sellIn, quality);
+      case "Aged Brie":
+        return new AgedBrie(sellIn, quality);
+      case "Sulfuras, Hand of Ragnaros":
+        return new Sulfuras(sellIn, quality);
+      default:
+        return new Item(name, sellIn, quality);
     }
-    return new Item(name, sellIn, quality);
   }
 
   @Override
@@ -29,24 +33,16 @@ public class Item {
   }
 
   public void updateQuality() {
-    switch (name) {
+    if (quality > 0) {
+      quality = quality - 1;
+    }
 
-      case "Sulfuras, Hand of Ragnaros":
+    sellIn = sellIn - 1;
 
-        break;
-      default:
-        if (quality > 0) {
-          quality = quality - 1;
-        }
-
-        sellIn = sellIn - 1;
-
-        if (sellIn < 0) {
-          if (quality > 0) {
-            quality = quality - 1;
-          }
-        }
-        break;
+    if (sellIn < 0) {
+      if (quality > 0) {
+        quality = quality - 1;
+      }
     }
   }
 }
