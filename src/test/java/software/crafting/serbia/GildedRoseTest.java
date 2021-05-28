@@ -28,7 +28,7 @@ public class GildedRoseTest {
 
   private String doStuff(String name, Integer quality, Integer sellIn) {
     Item[] items = new Item[]{
-        new Item(name, sellIn, quality)
+        Item.createItem(name, sellIn, quality)
     };
 
     final GildedRose gildedRose = new GildedRose(items);
