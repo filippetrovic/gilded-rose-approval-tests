@@ -17,6 +17,8 @@ public class Item {
   public static Item createItem(String name, int sellIn, int quality) {
     if ("Backstage passes to a TAFKAL80ETC concert".equals(name)) {
       return new BackstagePasses(sellIn, quality);
+    } else if ("Aged Brie".equals(name)) {
+      return new AgedBrie(sellIn, quality);
     }
     return new Item(name, sellIn, quality);
   }
@@ -28,20 +30,7 @@ public class Item {
 
   public void updateQuality() {
     switch (name) {
-      case "Aged Brie":
-        if (quality < 50) {
-          quality = quality + 1;
 
-        }
-
-        sellIn = sellIn - 1;
-
-        if (sellIn < 0) {
-          if (quality < 50) {
-            quality = quality + 1;
-          }
-        }
-        break;
       case "Sulfuras, Hand of Ragnaros":
 
         break;
